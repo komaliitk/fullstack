@@ -19,7 +19,7 @@ const User = new mongoose.model("User", userSchema)
 const careerSchema = new mongoose.Schema({
     title: String,
     description: String,
-    lastdate: String,
+    lastdate:Date,
     
 });
 
@@ -75,13 +75,13 @@ app.post("/career", (req, res)=> {
     //     if(Career_user){
     //         res.send({message: "job  already registerd"})
     //     } else {
-            const user = new Career_user({
+            const user = new Job_user({
                 title:req.body.title,
                 description:req.body.description,
                 lastdate:req.body.lastdate,
             
             })
-
+              console.log(req.body.lastdate);
             user.save(err => {
                 if(err) {
                     res.send(err)

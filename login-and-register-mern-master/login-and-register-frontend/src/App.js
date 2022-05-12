@@ -8,6 +8,8 @@ import Services from './components/Pages/Services'
 import Education from './components/Pages/Education'
 import Innovations from './components/Pages/Innovations'
 import Career from './components/Career'
+import Jobs from './components/Jobs'
+import Ad from './components/Ad'
 
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -64,6 +66,16 @@ function App() {
             <Career/>
           </Route>
 
+          <Route path="/jobs">
+            <Jobs/>
+          </Route>
+
+
+          <Route path="/ad">
+            <Ad />
+          </Route>
+
+         
 
 
         </Switch>
